@@ -3,8 +3,8 @@ function calculate(operator) {
   const num2 = document.getElementById('num2').value;
   const resultDiv = document.getElementById('result');
 
-  if (num1 === '' || num2 === '') {
-    resultDiv.textContent = '⚠️ Please enter both numbers!';
+  if (num1.trim() === '' || num2.trim() === '') {
+    resultDiv.textContent = '⚠️ Please enter both numbers before calculating!';
     resultDiv.className = 'result error';
     return;
   }
@@ -13,7 +13,7 @@ function calculate(operator) {
   const b = parseFloat(num2);
 
   if (isNaN(a) || isNaN(b)) {
-    resultDiv.textContent = '⚠️ Invalid input!';
+    resultDiv.textContent = '⚠️ Invalid input! Please enter valid numbers.';
     resultDiv.className = 'result error';
     return;
   }
