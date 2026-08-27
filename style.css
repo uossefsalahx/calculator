@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+h1 { color: #e0e0e0; font-size: 1.8rem; margin-bottom: 30px; }
+
+.input-group { margin-bottom: 16px; }
+
+input[type="number"] {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+input[type="number"]:focus { border-color: #4ecca3; }
+input::placeholder { color: rgba(255,255,255,0.4); }
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.buttons button {
+  padding: 16px;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  background: rgba(78,204,163,0.2);
+  color: #4ecca3;
+  cursor: pointer;
+  border: 1px solid rgba(78,204,163,0.3);
+  transition: all 0.2s;
+}
+
+.buttons button:hover {
+  background: #4ecca3;
+  color: #1a1a2e;
+  transform: translateY(-2px);
+}
+
+.result {
+  min-height: 60px;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.result.success { border-color: #4ecca3; color: #4ecca3; }
+.result.error   { border-color: #ff6b6b; color: #ff6b6b; }
+
+.reset-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255,107,107,0.2);
+  color: #ff6b6b;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid rgba(255,107,107,0.3);
+  transition: all 0.2s;
+}
+
+.reset-btn:hover { background: #ff6b6b; color: #fff; }
